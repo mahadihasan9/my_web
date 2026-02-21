@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Poppins:wght@400;600&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* CSS এর মূল অংশ */
+        
         :root {
             --primary-color: #4A90E2; 
             --name-color: #FFFFFF; 
@@ -27,7 +27,7 @@
             align-items: center;
             min-height: 100vh;
             
-            /* ডাইনামিক কালার চেঞ্জ ব্যাকগ্রাউন্ড */
+            
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
             animation: color-cycle 15s ease infinite; 
@@ -36,14 +36,14 @@
             overflow-x: hidden;
         }
 
-        /* ডাইনামিক ব্যাকগ্রাউন্ড অ্যানিমেশন */
+        
         @keyframes color-cycle {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* কার্ডের মূল অংশ */
+        
         .vcard-container {
             width: 90%;
             max-width: 400px;
@@ -58,7 +58,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* গ্লোয়িং বর্ডার অ্যানিমেশন */
+        
         .vcard-container::before {
             content: '';
             position: absolute;
@@ -81,7 +81,7 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* ছবির অংশ */
+        
         .profile-pic-container {
             width: 150px;
             height: 150px;
@@ -103,7 +103,7 @@
             object-fit: cover;
         }
 
-        /* নাম এবং স্ট্যাটাসের অংশ */
+        
         .name {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.6em; 
@@ -118,7 +118,7 @@
             margin-bottom: 15px; 
         }
 
-        /* ১. Python স্ট্যাটাস */
+        
         .designation-main {
             font-family: 'Roboto Mono', monospace; 
             font-size: 1.2em; 
@@ -138,7 +138,7 @@
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
         }
 
-        /* ২. শিক্ষাগত স্ট্যাটাস */
+        
         .designation-sub {
             font-size: 1.1em; 
             color: #4B8BBE; 
@@ -169,7 +169,7 @@
         }
 
 
-        /* অতিরিক্ত স্ট্যাটাস */
+        
         .current-status {
             font-size: 1em; 
             color: var(--text-color);
@@ -182,22 +182,22 @@
             margin-bottom: 25px;
         }
 
-        /* Contact Me সেকশন ডিজাইন */
+        
         .contact-section {
             padding-top: 25px;
             border-top: 1px solid #333333; 
         }
         
-        /* Contact Me শিরোনামের ডিজাইন */
+        
         .contact-me-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.6em;
             font-weight: 800;
             color: var(--primary-color);
             margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(74, 144, 226, 0.8); /* গ্লোইং ইফেক্ট */
+            text-shadow: 0 0 10px rgba(74, 144, 226, 0.8); 
             letter-spacing: 2px;
-            animation: pulse-glow 2s infinite alternate; /* নতুন: শিরোনামে হালকা পালস */
+            animation: pulse-glow 2s infinite alternate; 
         }
         
         @keyframes pulse-glow {
@@ -226,10 +226,10 @@
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
             text-decoration: none;
             position: relative;
-            overflow: hidden; /* গ্লোয়িং ইফেক্ট বাটনের ভেতরে আটকানো */
+            overflow: hidden; 
         }
         
-        /* বাটন গ্লো এবং পালস ইফেক্ট */
+        
         .contact-btn::before {
             content: '';
             position: absolute;
@@ -241,10 +241,10 @@
             z-index: -1;
             opacity: 0.7;
             filter: blur(8px);
-            animation: pulse-scale 2s infinite alternate; /* ছোট-বড় এবং গ্লো অ্যানিমেশন */
+            animation: pulse-scale 2s infinite alternate; 
         }
         
-        /* বাটন ভেদে গ্লোয়ের রঙ */
+        
         .email::before { background: var(--primary-color); }
         .github::before { background: #fff; }
         .whatsapp::before { background: #25D366; }
@@ -256,7 +256,7 @@
             50% { transform: scale(1.02); opacity: 0.9; }
             100% { transform: scale(0.98); opacity: 0.6; }
         }
-        /* হোভার করলে অ্যানিমেশন থামবে */
+        
         .contact-btn:hover::before {
             animation: none;
             opacity: 1;
@@ -274,7 +274,7 @@
             font-size: 1.25em; 
         }
         
-        /* লোগোর কালার এবং বাটন পটভূমি */
+        
         .email { background-color: var(--primary-color); }
         .github { background-color: #fff; color: #1e1e1e; }
         .github i { color: #1e1e1e; }
@@ -283,7 +283,7 @@
         .telegram { background-color: #0088cc; }
 
 
-        /* প্রতিক্রিয়াশীল নকশা (Responsive Design) */
+        (Responsive Design) */
         @media (max-width: 600px) {
             .contact-links {
                 grid-template-columns: 1fr; 
