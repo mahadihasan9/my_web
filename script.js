@@ -2,13 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedEl = document.getElementById('typed');
     if (typedEl) {
         const roles = [
-            'Cybersecurity & Pen Tester',
-            'Penetration Tester',
-            'Junior Developer',
+            'Backend Developer',
+            'Automation Developer',
             'Python Developer',
-            'Backend & API Specialist',
-            'FastAPI & Flask Developer',
-            'IoT & Automation Engineer'
+            'IoT & Automation Engineer',
+            'Penetration Tester',
+            'Cybersecurity Analyst'
         ];
 
         let roleIndex = 0;
