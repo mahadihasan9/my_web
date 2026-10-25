@@ -1,351 +1,754 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My webpage </title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Poppins:wght@400;600&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Mahdi Bin Iqbal — Portfolio | Junior Developer & Pen Tester</title>
+    
+    <meta name="description" content="Portfolio of Mahdi Bin Iqbal (MAHI-9763) — Junior Developer, Python Specialist, and Cybersecurity & Pen Tester based in Savar, Dhaka. Explore projects in FastAPI, Flask, Security Testing, Docker, IoT, and Automation.">
+    <meta name="keywords" content="Mahdi Bin Iqbal, mahadihasan9, Pen Tester, Penetration Testing, Cybersecurity, Python Developer, cryzen, osman-hadi, FastAPI, Flask, Docker, Termux, Arduino, Savar, Dhaka">
+    <meta name="author" content="Mahdi Bin Iqbal">
+    <meta name="theme-color" content="#0a0e17">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahdi-bin-iqbal.netlify.app/">
+    <meta property="og:title" content="Mahdi Bin Iqbal — Portfolio | Pen Tester & Developer">
+    <meta property="og:description" content="Junior Developer and Cybersecurity & Pen Tester focused on Python, backend development, automation, and security testing.">
+    <meta property="og:image" content="about.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        
-        :root {
-            --primary-color: #4A90E2; 
-            --name-color: #FFFFFF; 
-            --background-dark: #121212; 
-            --card-background: #1e1e1e; 
-            --text-color: #e0e0e0; 
-            --python-color: #FFD43B; 
-            --shadow-base: 0 10px 30px rgba(0, 0, 0, 0.4); 
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif; 
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            
-            
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: color-cycle 15s ease infinite; 
-
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        
-        @keyframes color-cycle {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        
-        .vcard-container {
-            width: 90%;
-            max-width: 400px;
-            background-color: var(--card-background); 
-            border-radius: 20px;
-            box-shadow: var(--shadow-base);
-            padding: 25px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease-in-out; 
-            overflow: hidden; 
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        
-        .vcard-container::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, var(--primary-color), var(--python-color), var(--primary-color));
-            background-size: 400% 400%;
-            border-radius: 25px; 
-            z-index: -1;
-            filter: blur(10px); 
-            opacity: 0.5;
-            animation: glowing-border 8s ease infinite alternate; 
-        }
-        
-        @keyframes glowing-border {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        
-        .profile-pic-container {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid var(--primary-color);
-            box-shadow: 0 0 20px rgba(74, 144, 226, 0.8); 
-            transition: transform 0.3s ease; 
-        }
-
-        .profile-pic-container:hover {
-            transform: scale(1.05); 
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        
-        .name {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.6em; 
-            margin-bottom: 5px;
-            font-weight: 900; 
-            color: var(--name-color); 
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-        
-        .status-container {
-            margin-bottom: 15px; 
-        }
-
-        
-        .designation-main {
-            font-family: 'Roboto Mono', monospace; 
-            font-size: 1.2em; 
-            font-weight: 500;
-            color: var(--python-color); 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 3px;
-            text-transform: uppercase; 
-        }
-        
-        .designation-main i.fab.fa-python {
-            color: #4B8BBE; 
-            font-size: 1.4em; 
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-        }
-
-        
-        .designation-sub {
-            font-size: 1.1em; 
-            color: #4B8BBE; 
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: flex; 
-            justify-content: center;
-            align-items: center;
-            letter-spacing: 0.5px; 
-        }
-        
-        .study-status-icon {
-             color: var(--text-color); 
-             margin-right: 8px;
-             font-size: 1.2em; 
-        }
-        .designation-sub-text {
-            color: #4B8BBE;
-            font-weight: 600;
-        }
-
-        .designation-sub-text::before {
-            content: "STUDYING IN: ";
-            color: var(--text-color); 
-            font-weight: 400;
-            font-size: 0.9em;
-            margin-right: 5px;
-        }
-
-
-        
-        .current-status {
-            font-size: 1em; 
-            color: var(--text-color);
-            font-style: italic;
-        }
-
-        .location {
-            font-size: 1.1em; 
-            color: var(--text-color);
-            margin-bottom: 25px;
-        }
-
-        
-        .contact-section {
-            padding-top: 25px;
-            border-top: 1px solid #333333; 
-        }
-        
-        
-        .contact-me-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6em;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(74, 144, 226, 0.8); 
-            letter-spacing: 2px;
-            animation: pulse-glow 2s infinite alternate; 
-        }
-        
-        @keyframes pulse-glow {
-            from { text-shadow: 0 0 8px rgba(74, 144, 226, 0.8), 0 0 15px rgba(74, 144, 226, 0.4); }
-            to { text-shadow: 0 0 15px rgba(74, 144, 226, 1), 0 0 25px rgba(74, 144, 226, 0.6); }
-        }
-
-
-        .contact-links {
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 15px;
-            border-radius: 10px;
-            font-size: 1.05em; 
-            font-weight: 600;
-            color: white; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
-            text-decoration: none;
-            position: relative;
-            overflow: hidden; 
-        }
-        
-        
-        .contact-btn::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 15px;
-            z-index: -1;
-            opacity: 0.7;
-            filter: blur(8px);
-            animation: pulse-scale 2s infinite alternate; 
-        }
-        
-        
-        .email::before { background: var(--primary-color); }
-        .github::before { background: #fff; }
-        .whatsapp::before { background: #25D366; }
-        .facebook::before { background: #1877F2; }
-        .telegram::before { background: #0088cc; }
-        
-        @keyframes pulse-scale {
-            0% { transform: scale(0.98); opacity: 0.6; }
-            50% { transform: scale(1.02); opacity: 0.9; }
-            100% { transform: scale(0.98); opacity: 0.6; }
-        }
-        
-        .contact-btn:hover::before {
-            animation: none;
-            opacity: 1;
-            transform: scale(1.1);
-        }
-        
-        .contact-btn:hover {
-            transform: translateY(-3px); 
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); 
-            filter: brightness(1.1); 
-        }
-        
-        .contact-btn i {
-            margin-right: 8px;
-            font-size: 1.25em; 
-        }
-        
-        
-        .email { background-color: var(--primary-color); }
-        .github { background-color: #fff; color: #1e1e1e; }
-        .github i { color: #1e1e1e; }
-        .whatsapp { background-color: #25D366; }
-        .facebook { background-color: #1877F2; }
-        .telegram { background-color: #0088cc; }
-
-
-        (Responsive Design) */
-        @media (max-width: 600px) {
-            .contact-links {
-                grid-template-columns: 1fr; 
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="vcard-container" id="vcard">
-        <div class="profile-pic-container">
-            <img src="profile.webp" alt="Mahadi Hasan Profile Picture" class="profile-pic">
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="container nav-inner">
+                <a href="#home" class="logo">
+                    <span class="logo-code">&lt;/&gt;</span> Mahdi<span>.</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#research">Forked Projects</a>
+                    <a href="#stats">Stats</a>
+                    <a href="#contact" class="nav-cta">Contact</a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#research">Forked Projects</a>
+            <a href="#stats">Stats</a>
+            <a href="#contact">Contact</a>
         </div>
+    </header>
 
-        <div class="info-section">
-            <div class="name">Mahadi Hasan</div>
-            
-            <div class="status-container">
-                <div class="designation-main">
-                    <i class="fab fa-python"></i> 
-                    WILL BE A PY DEVELPPER
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-text reveal">
+                    <div class="hero-terminal-tag">
+                        <span class="status-dot"></span>
+                        <span>Online</span>
+                    </div>
+                    <h1 class="hero-name">Hi, I'm <span class="accent-name">Mahdi Bin Iqbal</span> 👋</h1>
+                    <div class="hero-role">
+                        I am a <span class="typed" id="typed"></span><span class="cursor"></span>
+                    </div>
+                    <p class="hero-bio">
+                        A developer focused on <strong>Python, backend architectures, automation, and cybersecurity & penetration testing</strong>. I build secure applications, explore systems like Linux and Docker, and continuously elevate my craft through hands-on work.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+                        <a href="#contact" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                        <a href="https://github.com/mahadihasan9" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/mahadihasan9" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub: mahadihasan9"><i class="fab fa-github"></i></a>
+                        <a href="mailto:islammdmahadi942@gmail.com" class="social-link" title="Email: islammdmahadi942@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://t.me/mahadihasan099" target="_blank" rel="noopener noreferrer" class="social-link" title="Telegram: @mahadihasan099"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/+8801701902728" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp: +8801701902728"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/mahdibiniqbal999" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook: Mahdi Bin Iqbal"><i class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
-                
-                <div class="designation-sub">
-                    <i class="fas fa-user-graduate study-status-icon"></i> 
-                    <span class="designation-sub-text">CLASS 10</span>
-                </div>
-                
-                <div class="current-status">
-                    High School Education
+                <div class="hero-image-wrap reveal">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image">
+                        <img src="new.jpg" alt="Mahdi Bin Iqbal profile portrait" width="650" height="865">
+                    </div>
+                    <div class="hero-badge">
+                        <i class="fas fa-user-shield"></i> MAHI-9763
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="location"><i class="fas fa-map-marker-alt"></i> Savar, Dhaka, Bangladesh</div>
-        </div>
-        
-        <div class="contact-section">
-            <div class="contact-me-title">CONTACT ME</div>
-            
-            <div class="contact-links">
-                <a href="mailto:islammdmahadi943@gmail.com" class="contact-btn email" title="Email">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="https://github.com/mahadihasan9" target="_blank" class="contact-btn github" title="GitHub">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://wa.me/+8801701902728" target="_blank" class="contact-btn whatsapp" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://www.facebook.com/mahdibiniqbal999" target="_blank" class="contact-btn facebook" title="Facebook">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-                <a href="https://t.me/mahadihasan099" target="_blank" class="contact-btn telegram" title="Telegram">
-                    <i class="fab fa-telegram-plane"></i> Telegram
-                </a>
+        <section class="section section-alt" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">01. ABOUT ME</span>
+                    <h2 class="section-title">Know Who <span>I Am</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-sub">Developer, penetration tester, and practical builder based in Savar, Dhaka.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-img-wrap reveal">
+                        <div class="about-img">
+                            <img src="about.jpg" alt="Mahdi Bin Iqbal working on code" width="1448" height="1086">
+                        </div>
+                        <div class="about-img-badge">
+                            <span><i class="fas fa-map-marker-alt"></i> Savar, Dhaka, Bangladesh</span>
+                            <span><i class="fas fa-shield-alt"></i> Security & Pen Testing</span>
+                        </div>
+                    </div>
+                    <div class="about-text reveal">
+                        <h3>Turning Ideas Into Secure, Functional Code</h3>
+                        <p>
+                            I am a junior software developer and penetration tester dedicated to mastering <strong>Python, backend architectures, automation, and cybersecurity & penetration testing fundamentals</strong>. I believe the best way to master technology is through practical, real-world execution.
+                        </p>
+                        <p>
+                            From publishing Python libraries on PyPI to developing RESTful services with FastAPI and Flask, my journey is driven by relentless curiosity and curiosity about how complex systems work under the hood.
+                        </p>
+
+                        <div class="about-info-cards">
+                            <div class="info-card">
+                                <i class="fas fa-shield-halved"></i>
+                                <div>
+                                    <h4>Specialization</h4>
+                                    <p>Cybersecurity & Penetration Testing, Backend Systems</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-laptop-code"></i>
+                                <div>
+                                    <h4>Stack</h4>
+                                    <p>Python, FastAPI, Linux, Docker, Bash & Hardware</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <h4>Main Goal</h4>
+                                    <p>Build secure, efficient, and impactful software</p>
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-location-dot"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Savar, Dhaka, Bangladesh (Remote Friendly)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-num">10+</div>
+                                <div class="stat-label">Personal Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">4+</div>
+                                <div class="stat-label">Core Languages</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">100%</div>
+                                <div class="stat-label">Practical Focus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">02. TECH STACK</span>
+                    <h2 class="section-title">My <span>Technical Arsenal</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-sub">Languages, frameworks, systems, and security tools I work with daily.</p>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skill-category-card reveal">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-code"></i></div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-python"></i> Python</span>
+                                    <span class="skill-pct">90%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="90"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-terminal"></i> Bash / Shell</span>
+                                    <span class="skill-pct">80%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="80"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-js"></i> JavaScript</span>
+                                    <span class="skill-pct">75%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="75"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-laptop-code"></i> C / C++</span>
+                                    <span class="skill-pct">70%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="70"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-java"></i> Java</span>
+                                    <span class="skill-pct">65%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="65"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card reveal">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-server"></i></div>
+                            <h3>Backend & Web</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-bolt"></i> FastAPI</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="85"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-pepper-hot"></i> Flask</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="85"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-network-wired"></i> RESTful APIs</span>
+                                    <span class="skill-pct">80%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="80"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-database"></i> SQLite & SQL</span>
+                                    <span class="skill-pct">75%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="75"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="85"></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card reveal">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fas fa-user-shield"></i></div>
+                            <h3>Security & DevOps</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-shield-alt"></i> Penetration Testing</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="85"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-linux"></i> Linux & Termux</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="85"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-docker"></i> Docker Containers</span>
+                                    <span class="skill-pct">75%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="75"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                                    <span class="skill-pct">85%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="85"></span></div>
+                            </div>
+                            <div class="skill-item-row">
+                                <div class="skill-meta">
+                                    <span><i class="fas fa-microchip"></i> ESP32 & Arduino</span>
+                                    <span class="skill-pct">80%</span>
+                                </div>
+                                <div class="skill-progress-bar"><span data-pct="80"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">03. PORTFOLIO</span>
+                    <h2 class="section-title">My Own <span>Projects</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-sub">Hand-crafted applications, libraries, and tools I maintain on GitHub and PyPI.</p>
+                </div>
+
+                <div class="projects-filter reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="backend">Backend & Web</button>
+                    <button class="filter-btn" data-filter="library">Python Libraries</button>
+                    <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal" data-category="library">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="fas fa-shield-cat"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://pypi.org/project/cryzen/" target="_blank" rel="noopener noreferrer" class="pypi-link-icon" title="View on PyPI"><i class="fab fa-python"></i></a>
+                                <a href="https://github.com/mahadihasan9/cryzen" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">cryzen — Python Encryption Library</h3>
+                            <p class="project-desc">
+                                A specialized cryptographic library published on PyPI created to simplify robust data encryption, decryption, and secure key generation workflows in Python.
+                            </p>
+                            <div class="pip-install-box">
+                                <code>pip install cryzen</code>
+                                <button class="pip-copy-btn" data-copy="pip install cryzen" aria-label="Copy install command" title="Copy"><i class="far fa-copy"></i></button>
+                            </div>
+                            <div class="pypi-action-row">
+                                <a href="https://pypi.org/project/cryzen/" target="_blank" rel="noopener noreferrer" class="pypi-doc-btn">
+                                    <i class="fab fa-python"></i> View Docs on PyPI
+                                </a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag pypi-tag">PyPI</span>
+                                <span class="tag accent-tag">Cryptography</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Security</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="library">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="fas fa-cubes"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://pypi.org/project/osman-hadi/" target="_blank" rel="noopener noreferrer" class="pypi-link-icon" title="View on PyPI"><i class="fab fa-python"></i></a>
+                                <a href="https://github.com/mahadihasan9/Osman_Hadi" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">osman-hadi — Python Library</h3>
+                            <p class="project-desc">
+                                Osman Hadi Archive is a Python library that documents and showcases the life, achievements, and revolutionary activities of Osman Hadi. It uses ASCII art, banners, and structured textual content to make console output engaging. The library is fully bilingual (English & Bengali) and designed for educational and commemorative purposes.
+                            </p>
+                            <div class="pip-install-box">
+                                <code>pip install osman-hadi</code>
+                                <button class="pip-copy-btn" data-copy="pip install osman-hadi" aria-label="Copy install command" title="Copy"><i class="far fa-copy"></i></button>
+                            </div>
+                            <div class="pypi-action-row">
+                                <a href="https://pypi.org/project/osman-hadi/" target="_blank" rel="noopener noreferrer" class="pypi-doc-btn">
+                                    <i class="fab fa-python"></i> View Docs on PyPI
+                                </a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag pypi-tag">PyPI</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Library</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="backend">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="far fa-folder"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://github.com/mahadihasan9/Personal-group-chat-pro" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Personal-group-chat-pro</h3>
+                            <p class="project-desc">
+                                An advanced real-time group chat web application featuring dynamic multi-user rooms, instant messaging with WebSockets, and smooth UI feedback.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Flask</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">WebSockets</span>
+                                <span class="tag">Real-Time</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="backend">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="far fa-folder"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://github.com/mahadihasan9/fastAPI_project" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">fastAPI_project</h3>
+                            <p class="project-desc">
+                                Robust photo upload, validation, and media asset management backend service engineered with FastAPI, featuring asynchronous endpoints and schema validation.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">Async</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="iot">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="far fa-folder"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://github.com/mahadihasan9/ESP32TelegramBot" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">ESP32 Telegram Bot</h3>
+                            <p class="project-desc">
+                                Embedded IoT firmware bridging the ESP32 microcontroller with the Telegram Bot API for remote wireless telemetry, GPIO control, and sensor notification.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag accent-tag">ESP32</span>
+                                <span class="tag">Arduino / C++</span>
+                                <span class="tag">IoT</span>
+                                <span class="tag">Telegram API</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="backend">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="far fa-folder"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://github.com/mahadihasan9/build-apk-in-termux" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">build-apk-in-termux</h3>
+                            <p class="project-desc">
+                                Streamlined tooling and environment scripts enabling developers to compile, sign, and build Android APK packages natively inside the Termux terminal.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Termux</span>
+                                <span class="tag">Bash</span>
+                                <span class="tag">Android</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="backend">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="far fa-folder"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://github.com/mahadihasan9/small-video-sharing-website" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Small Video Sharing Platform</h3>
+                            <p class="project-desc">
+                                A lightweight video gallery and streaming web application with video upload capabilities, thumbnail generation, and responsive playback controls.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">HTML5 Video</span>
+                                <span class="tag">Media</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-category="backend">
+                        <div class="project-card-header">
+                            <div class="project-folder-icon"><i class="far fa-folder"></i></div>
+                            <div class="project-meta-links">
+                                <a href="https://github.com/mahadihasan9/WoW-game-for-telegram" target="_blank" rel="noopener noreferrer" title="View Source"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">WoW RPG Game Bot</h3>
+                            <p class="project-desc">
+                                An interactive text-based RPG adventure bot built for Telegram groups, featuring character stats, combat turns, and level progression logic.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Telegram Bot</span>
+                                <span class="tag">Game Dev</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="research">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">04. FORKED / LEARNING PROJECTS</span>
+                    <h2 class="section-title">Forked & <span>Study Repos</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-sub">Projects and reference repositories I study to deepen wireless security, memory inspection, and reverse engineering skills.</p>
+                </div>
+
+                <div class="research-grid">
+                    <div class="research-card reveal">
+                        <div class="research-top">
+                            <i class="fas fa-wifi"></i>
+                            <h4 class="research-title">ESP32-Deauther</h4>
+                        </div>
+                        <p class="research-desc">ESP32-based 802.11 Wi-Fi management frame generation and deauthentication research framework.</p>
+                        <a href="https://github.com/mahadihasan9/ESP32-Deauther" target="_blank" rel="noopener noreferrer" class="research-link">
+                            View Forked Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card reveal">
+                        <div class="research-top">
+                            <i class="fas fa-key"></i>
+                            <h4 class="research-title">OneShot</h4>
+                        </div>
+                        <p class="research-desc">Wi-Fi Protected Setup (WPS) PIN recovery and Pixie-Dust vulnerability analysis tool without root requirements.</p>
+                        <a href="https://github.com/mahadihasan9/OneShot" target="_blank" rel="noopener noreferrer" class="research-link">
+                            View Forked Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card reveal">
+                        <div class="research-top">
+                            <i class="fas fa-satellite-dish"></i>
+                            <h4 class="research-title">esp32-wifi-penetration-tool</h4>
+                        </div>
+                        <p class="research-desc">Comprehensive ESP32 penetration testing tool exploring PMKID packet capture and beacon sniffing.</p>
+                        <a href="https://github.com/mahadihasan9/esp32-wifi-penetration-tool" target="_blank" rel="noopener noreferrer" class="research-link">
+                            View Forked Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card reveal">
+                        <div class="research-top">
+                            <i class="fas fa-memory"></i>
+                            <h4 class="research-title">Zygisk-Il2CppDumper</h4>
+                        </div>
+                        <p class="research-desc">Android zygote-level injection tool for dumping runtime Il2Cpp structures and binaries via Zygisk.</p>
+                        <a href="https://github.com/mahadihasan9/Zygisk-Il2CppDumper" target="_blank" rel="noopener noreferrer" class="research-link">
+                            View Forked Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card reveal">
+                        <div class="research-top">
+                            <i class="fas fa-terminal"></i>
+                            <h4 class="research-title">termux-android-hello</h4>
+                        </div>
+                        <p class="research-desc">Android CLI and native terminal toolchain development environment testing inside Termux.</p>
+                        <a href="https://github.com/mahadihasan9/termux-android-hello" target="_blank" rel="noopener noreferrer" class="research-link">
+                            View Forked Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="research-card reveal">
+                        <div class="research-top">
+                            <i class="fas fa-microchip"></i>
+                            <h4 class="research-title">KittyMemoryEx</h4>
+                        </div>
+                        <p class="research-desc">Runtime memory patching, symbol lookup, and ARM binary manipulation library for Android security analysis.</p>
+                        <a href="https://github.com/mahadihasan9/KittyMemoryEx.git" target="_blank" rel="noopener noreferrer" class="research-link">
+                            View Forked Repo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="stats">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">05. ACTIVITY</span>
+                    <h2 class="section-title">GitHub <span>Metrics</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-sub">Real-time statistics fetched directly from my GitHub profile (@mahadihasan9).</p>
+                </div>
+
+                <div class="github-stats-wrap reveal">
+                    <a href="https://github.com/mahadihasan9" target="_blank" rel="noopener noreferrer">
+                        <img class="github-stat-img" src="https://github-readme-stats.vercel.app/api?username=mahadihasan9&show_icons=true&theme=tokyonight&hide_border=true" alt="Mahdi Bin Iqbal GitHub Stats" loading="lazy">
+                    </a>
+                    <a href="https://github.com/mahadihasan9" target="_blank" rel="noopener noreferrer">
+                        <img class="github-stat-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahadihasan9&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages Used" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">06. CONNECT</span>
+                    <h2 class="section-title">Get In <span>Touch</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-sub">Have an interesting project, security assessment, or collaboration opportunity? Let's talk!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <a class="contact-card" href="mailto:islammdmahadi942@gmail.com">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="label">Primary Email</div>
+                                <div class="value">islammdmahadi942@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a class="contact-card" href="mailto:mahdi.bin.iqbal.x1@gmail.com">
+                            <div class="contact-icon"><i class="far fa-envelope"></i></div>
+                            <div>
+                                <div class="label">Secondary Email</div>
+                                <div class="value">mahdi.bin.iqbal.x1@gmail.com</div>
+                            </div>
+                        </a>
+
+                        <a class="contact-card" href="https://t.me/mahadihasan099" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-icon"><i class="fab fa-telegram-plane"></i></div>
+                            <div>
+                                <div class="label">Telegram</div>
+                                <div class="value">@mahadihasan099</div>
+                            </div>
+                        </a>
+
+                        <a class="contact-card" href="https://wa.me/+8801701902728" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <div class="label">WhatsApp</div>
+                                <div class="value">+880 1701 902728</div>
+                            </div>
+                        </a>
+
+                        <a class="contact-card" href="https://www.facebook.com/mahdibiniqbal999" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+                            <div>
+                                <div class="label">Facebook</div>
+                                <div class="value">Mahdi Bin Iqbal</div>
+                            </div>
+                        </a>
+
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fas fa-map-pin"></i></div>
+                            <div>
+                                <div class="label">Location</div>
+                                <div class="value">Savar, Dhaka, Bangladesh</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap reveal">
+                        <form id="contactForm" action="mailto:islammdmahadi942@gmail.com" method="POST" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="form-name">Your Full Name</label>
+                                <input type="text" id="form-name" name="Name" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Your Email Address</label>
+                                <input type="email" id="form-email" name="Email" class="form-control" placeholder="example@domain.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" name="Subject" class="form-control" placeholder="Project inquiry / Security assessment" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" name="Message" class="form-control" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                            <div class="form-status" id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <span class="logo-code">&lt;/&gt;</span> Mahdi<span>.</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#research">Forked Projects</a>
+                    <a href="#stats">Stats</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/mahadihasan9" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:islammdmahadi942@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://t.me/mahadihasan099" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://wa.me/+8801701902728" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/mahdibiniqbal999" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> Mahdi Bin Iqbal | MAHI-9763. Built with clean code & passion.
             </div>
         </div>
-    </div>
+    </footer>
 
-    <script>
-       
-    </script>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <script src="script.js"></script>
 </body>
-            </html>
+</html>
