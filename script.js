@@ -227,4 +227,79 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 5000);
         });
     }
+
+    const githubStats = document.getElementById('githubStats');
+
+    if (githubStats) {
+        const setStatText = (id, value) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value;
+        };
+
+        const renderLanguages = (languages) => {
+            const container = document.getElementById('ghLangs');
+            if (!container) return;
+
+            if (!languages.length) {
+                container.innerHTML = '<div class="gh-loading">No language data available.</div>';
+                return;
+            }
+
+            const total = languages.reduce((sum, [, count]) => sum + count, 0) || 1;
+
+            container.innerHTML = languages.map(([name, count]) => {
+                const pct = Math.round((count / total) * 100);
+                return `<div class="gh-lang-row">
+                    <div class="gh-lang-meta"><span>${name}</span><span>${pct}%</span></div>
+                    <div class="gh-lang-bar"><span style="width:${pct}%"></span></div>
+                </div>`;
+            }).join('');
+        };
+
+        fetch('https://api.github.com/users/mahadihasan9')
+            .then(response => {
+                if (!response.ok) throw new Error('stats');
+                return response.json();
+            })
+            .then(user => {
+                setStatText('ghRepos', user.public_repos ?? 0);
+                setStatText('ghFollowers', user.followers ?? 0);
+                setStatText('ghFollowing', user.following ?? 0);
+            })
+            .catch(() => {
+                setStatText('ghRepos', '—');
+                setStatText('ghFollowers', '—');
+                setStatText('ghFollowing', '—');
+            });
+
+        fetch('https://api.github.com/users/mahadihasan9/repos?per_page=100&sort=updated')
+            .then(response => {
+                if (!response.ok) throw new Error('repos');
+                return response.json();
+            })
+            .then(repos => {
+                const stars = repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
+                setStatText('ghStars', stars);
+
+                const counts = {};
+                repos.forEach(repo => {
+                    if (repo.language && !repo.fork) {
+                        counts[repo.language] = (counts[repo.language] || 0) + 1;
+                    }
+                });
+
+                const languages = Object.entries(counts)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 6);
+
+                renderLanguages(languages);
+            })
+            .catch(() => {
+                setStatText('ghStars', '—');
+                const container = document.getElementById('ghLangs');
+                if (container) {
+                    container.innerHTML = '<div class="gh-loading">Unable to load language data right now.</div>';
+                }
+            });
+    }
 });
